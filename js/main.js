@@ -71,9 +71,17 @@ function fetchPhones(){
         var Phone = phones[i].phone;
 
         phonesResults.innerHTML += '<div class="row">' + 
-                                    '<h3 margin="100px">' + Name + '</h3>' + 
+                                    '<div class="col-sm-10">' + 
+                                    '<div class="row">' +
+                                    '<h3 margin="100px">' + Name + '</h3>' +
+                                    '</div>' +
+                                    '<div class="row">' +
                                     '<p>' + Phone + '</p>' + 
+                                    '</div>' +
+                                    '</div>' +
+                                    '<div class="col-sm-1">' + 
                                     '<a onclick="deletePhones(\''+Phone+'\')" class="btn btn-danger" target="_self" href= "#">Delete</a>' +
+                                    '</div>' +
                                     '</div>';
     }
 }
